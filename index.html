@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty Explorer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <i
+          class="fas fa-rocket"
+          style="color: var(--primary); font-size: 2rem"
+        ></i>
+        <h1>Rick and Morty Explorer</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#characters">Personajes</a></li>
+          <li><a href="#locations">Ubicaciones</a></li>
+          <li><a href="#about">Acerca de</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Explora el Multiverso de Rick and Morty</h1>
+        <p>
+          Descubre personajes, ubicaciones y dimensiones del universo animado
+          más loco de la televisión.
+        </p>
+        <button class="cta-button" id="exploreBtn">
+          <i class="fas fa-search"></i> Explorar Ahora
+        </button>
+      </div>
+    </section>
+
+    <section class="characters" id="characters">
+      <h2 class="section-title">Personajes</h2>
+      <div class="filters">
+        <button class="filter-button active" data-status="all">Todos</button>
+        <button class="filter-button" data-status="alive">Vivos</button>
+        <button class="filter-button" data-status="dead">Muertos</button>
+        <button class="filter-button" data-status="unknown">Desconocido</button>
+      </div>
+      <div class="loading" id="charactersLoading">
+        <div class="spinner"></div>
+        <p>Cargando personajes...</p>
+      </div>
+      <div class="error" id="charactersError" style="display: none">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p>Error al cargar los personajes. Intenta nuevamente.</p>
+      </div>
+      <div class="characters-grid" id="charactersGrid"></div>
+    </section>
+
+    <section class="locations" id="locations">
+      <h2 class="section-title">Ubicaciones</h2>
+      <div class="loading" id="locationsLoading">
+        <div class="spinner"></div>
+        <p>Cargando ubicaciones...</p>
+      </div>
+      <div class="error" id="locationsError" style="display: none">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p>Error al cargar las ubicaciones. Intenta nuevamente.</p>
+      </div>
+      <div class="locations-grid" id="locationsGrid"></div>
+    </section>
+
+    <section
+      id="about"
+      style="
+        padding: 5rem 2rem;
+        text-align: center;
+        background-color: rgba(15, 15, 35, 0.7);
+      "
+    >
+      <h2 class="section-title">Acerca de este Proyecto</h2>
+      <p style="max-width: 800px; margin: 0 auto 2rem auto; font-size: 1.2rem">
+        Esta landing page fue desarrollada como parte de un proyecto educativo
+        para demostrar habilidades en desarrollo web frontend. Utiliza la API
+        pública de Rick and Morty para mostrar personajes y ubicaciones de
+        manera dinámica.
+      </p>
+      <div
+        style="
+          background: rgba(66, 180, 202, 0.1);
+          padding: 2rem;
+          border-radius: 15px;
+          max-width: 800px;
+          margin: 0 auto;
+        "
+      >
+        <h3 style="color: var(--primary); margin-bottom: 1rem">
+          Tecnologías Utilizadas
+        </h3>
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+          "
+        >
+          <div style="text-align: center">
+            <i class="fab fa-html5" style="font-size: 3rem; color: #e34f26"></i>
+            <p>HTML5</p>
+          </div>
+          <div style="text-align: center">
+            <i
+              class="fab fa-css3-alt"
+              style="font-size: 3rem; color: #1572b6"
+            ></i>
+            <p>CSS3</p>
+          </div>
+          <div style="text-align: center">
+            <i class="fab fa-js" style="font-size: 3rem; color: #f7df1e"></i>
+            <p>JavaScript</p>
+          </div>
+          <div style="text-align: center">
+            <i
+              class="fas fa-code"
+              style="font-size: 3rem; color: var(--secondary)"
+            ></i>
+            <p>Rick and Morty API</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Rick and Morty Explorer</h2>
+        </div>
+        <div class="footer-links">
+          <a href="#">Inicio</a>
+          <a href="#characters">Personajes</a>
+          <a href="#locations">Ubicaciones</a>
+          <a href="#about">Acerca de</a>
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Términos de Uso</a>
+        </div>
+        <p class="copyright">
+          © 2023 Rick and Morty Explorer. Todos los derechos reservados.
+        </p>
+        <p class="copyright">
+          Este sitio utiliza la API pública de Rick and Morty.
+        </p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
